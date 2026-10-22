@@ -1,0 +1,43 @@
+
+name: Update EPG
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-epg:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout our repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Clone IPTV EPG generator
+        run: |
+          git clone --depth 1 https://github.com/iptv-org/epg.git /tmp/epg
+
+      - name: Install dependencies
+        working-directory: /tmp/epg
+        run: npm install
+
+      - name: Generate BBC programme guide
+        working-directory: /tmp/epg
+        run: |
+          npm run grab --- \
+            --channels="${GITHUB_WORKSPACE}/config/bbc.channels.xml" \
+            --output="${GITHUB_WORKSPACE}/guide.xml" \
+            --days=2 \
+            --maxConnections=1 \
+            --delay=500
+
+      - name: Upload generated guide
+        uses: actions/upload-artifact@v4
+        with:
+          name: bbc-epg
+          path: guide.xml
+          if-no-files-found: error
