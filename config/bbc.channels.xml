@@ -1,0 +1,8 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<channels>
+  <channel site="freeview.co.uk" site_id="64265#4163" lang="en" xmltv_id="BBCOne.uk@South">BBC ONE South</channel>
+  <channel site="freeview.co.uk" site_id="64257#17472" lang="en" xmltv_id="BBCTwo.uk@HD">BBC TWO HD</channel>
+  <channel site="freeview.co.uk" site_id="64257#4288" lang="en" xmltv_id="BBCThree.uk@SD">BBC THREE</channel>
+  <channel site="freeview.co.uk" site_id="64257#4544" lang="en" xmltv_id="BBCFour.uk@UK">BBC FOUR</channel>
+</channels>
