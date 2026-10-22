@@ -1,7 +1,7 @@
 
 #EXTM3U
 
-#EXTINF:-1 tvg-id="BBCOne.uk@South" tvg-name="BBC One South HD" tvg-logo="https://commons.wikimedia.org/wiki/Special:FilePath/BBC_One_logo_2021.svg" group-title="BBC",BBC One South HD
+#EXTINF:-1 tvg-id="BBCOne.uk@South" tvg-name="BBC One South HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/BBC_One_logo_2021.svg/512px-BBC_One_logo_2021.svg.png" group-title="BBC",BBC One South HD
 https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_south/hevc_iptv_mse_v0.mpd
 
 #EXTINF:-1 tvg-id="BBCTwo.uk@HD" tvg-name="BBC Two HD" tvg-logo="https://commons.wikimedia.org/wiki/Special:FilePath/BBC_Two_logo_2021.svg" group-title="BBC",BBC Two HD
