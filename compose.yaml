@@ -7,3 +7,17 @@ services:
       - "8095:80"
     volumes:
       - ./web:/usr/share/nginx/html:ro
+
+  epg:
+    image: ghcr.io/iptv-org/epg:master
+    container_name: uk-iptv-epg
+    restart: unless-stopped
+    environment:
+      CRON_SCHEDULE: "0 4 * * *"
+      RUN_AT_STARTUP: "true"
+      DAYS: "2"
+      MAX_CONNECTIONS: "1"
+      DELAY: "500"
+    volumes:
+      - ./config/bbc.channels.xml:/epg/public/channels.xml:ro
+      - ./web:/epg/public
