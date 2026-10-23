@@ -1,0 +1,9 @@
+services:
+  web:
+    image: nginx:alpine
+    container_name: uk-iptv
+    restart: unless-stopped
+    ports:
+      - "8095:80"
+    volumes:
+      - ./web:/usr/share/nginx/html:ro
